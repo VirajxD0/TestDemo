@@ -1,0 +1,1018 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Framevault</title>
+  </head>
+
+  <body>
+    <nav
+      class="fixed top-0 w-full flex justify-end z-50 font-bold rounded bg-indigo-900"
+    >
+      <!-- Home -->
+      <a
+        href="#page1"
+        class="text-white relative rounded-xl min-w-24 h-10 flex items-center justify-center px-4 m-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+      >
+        Home
+      </a>
+
+      <!-- Gallery -->
+      <a
+        href="#page2"
+        class="text-white relative rounded-xl min-w-24 h-10 flex items-center justify-center px-4 m-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+      >
+        Gallery
+      </a>
+
+      <div class="relative group">
+        <button
+          class="text-white relative rounded-xl min-w-24 h-10 flex items-center justify-center px-4 m-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-full after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+        >
+          More
+        </button>
+
+        <div
+          class="absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+        >
+          <a
+            href="#page3"
+            class="block px-4 py-2 hover:bg-indigo-100 hover:rounded-xl"
+          >
+            About
+          </a>
+
+          <a
+            href="#page4"
+            class="block px-4 py-2 hover:bg-indigo-100 hover:rounded-xl"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
+      <button
+        id="addImageBtn"
+        class="bg-green-500 hover:bg-green-700 rounded-xl min-w-24 h-10 px-4 flex items-center justify-center m-2"
+      >
+        Add Image
+      </button>
+
+      <input type="file" id="imageInput" accept="image/*" class="hidden" />
+    </nav>
+    <section
+      id="page1"
+      class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 bg-[url('/src/assets/m.jpg')] bg-cover bg-center"
+    >
+      <!-- CONTENT -->
+      <div class="z-10 max-w-3xl">
+        <h1
+          class="text-[80px] md:text-[120px] font-bold text-black opacity-0 animate-[slideLeft_1s_ease_forwards]"
+        >
+          My Framevault
+        </h1>
+
+        <p
+          class="itmt-6 text-white bg-white/20 px-4 py-2 rounded-xl shadow-xl opacity-0 animate-[slideLeft_1s_ease_forwards] [animation-delay:0.2s]"
+        >
+          Discover a curated collection of moments, stories, and perspectives
+          captured through the lens. Each image reflects a unique vision crafted
+          to inspire, evoke, and endure.
+        </p>
+      </div>
+    </section>
+
+    <!-- <section
+      id="page2"
+      class="min-h-screen bg-gradient-to-br from-indigo-500 to-indigo-950"
+    >
+      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 p-5">
+        <div class="w-90 h-100 overflow-hidden rounded-xl">
+          <img
+            src="https://picsum.photos/300/400"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+
+        <div class="w-90 h-100 overflow-hidden rounded-xl">
+          <img
+            src="https://picsum.photos/300/500"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+
+        <div class="w-90 h-100 overflow-hidden rounded-xl">
+          <img
+            src="https://picsum.photos/300/350"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+
+        <div class="w-90 h-100 overflow-hidden rounded-xl">
+          <img
+            src="https://picsum.photos/200/350"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="w-90 h-100 overflow-hidden rounded-xl">
+          <img
+            src="https://picsum.photos/950/350"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="w-90 h-100 overflow-hidden rounded-xl">
+          <img
+            src="https://picsum.photos/200/150"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="w-90 h-100 overflow-hidden rounded-xl">
+          <img
+            src="https://picsum.photos/800/150"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="w-90 h-100 overflow-hidden rounded-xl">
+          <img
+            src="https://picsum.photos/800/250"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="w-90 h-100 overflow-hidden rounded-xl">
+          <img
+            src="https://picsum.photos/800/50"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="w-90 h-100 overflow-hidden rounded-xl">
+          <img
+            src="https://picsum.photos/800/150"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="w-90 h-100 overflow-hidden rounded-xl">
+          <img
+            src="https://picsum.photos/100/250"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section> -->
+    <section id="page2" class="min-h-screen bg-indigo-950">
+      <div class="flex justify-center pt-7 pb-5">
+        <h2 class="text-indigo-400 text-5xl font-bold">OUR GALLERY</h2>
+      </div>
+      <div class="columns-2 md:columns-3 xl:columns-5 gap-4 p-5 space-y-4">
+        <img src="https://picsum.photos/300/400" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/300/500" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/300/350" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/300/600" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/300/450" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/300/300" class="w-full rounded-xl" />
+
+        <img src="https://picsum.photos/100/100" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/150/150" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/200/250" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/100/250" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/200/350" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/100/200" class="w-full rounded-xl" />
+
+        <img src="https://picsum.photos/200/100" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/550/123" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/400/500" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/140/150" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/220/350" class="w-full rounded-xl" />
+        <img src="https://picsum.photos/180/200" class="w-full rounded-xl" />
+      </div>
+      <div
+        id="gallery"
+        class="columns-2 md:columns-3 xl:columns-5 gap-4 p-5 space-y-4"
+      ></div>
+    </section>
+
+    <section class="bg-indigo-950 py-40 pt-0">
+      <div
+        class="max-w-6xl mx-auto flex flex-col border border-white/20 rounded-2xl p-6 bg-white/5 backdrop-blur-md shadow-xl"
+      >
+        <!-- TITLE (NOW IN FLOW) -->
+        <h4 class="text-center text-white text-5xl font-bold mb-8">
+          FEATURED PHOTOS
+        </h4>
+
+        <!-- SLIDER ROW -->
+        <div
+          class="relative flex items-center justify-center w-full min-h-[500px]"
+        >
+          <!-- LEFT BUTTON -->
+          <button
+            id="prevBtn"
+            class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl z-10 hover:scale-125 transition"
+          >
+            ❮
+          </button>
+
+          <!-- CONTENT -->
+          <div class="flex items-center gap-10">
+            <!-- Image -->
+            <img
+              id="slideImage"
+              class="w-[400px] h-[500px] object-cover rounded-xl hidden-left"
+              src="https://picsum.photos/500/600"
+            />
+
+            <!-- Text -->
+            <div class="max-w-md text-white hidden-right">
+              <h2 id="slideTitle" class="text-4xl font-bold mb-4">
+                Featured Shot
+              </h2>
+              <p id="slideDesc">
+                This image captures emotion, contrast, and depth.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT BUTTON -->
+          <button
+            id="nextBtn"
+            class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl z-10 hover:scale-125 transition"
+          >
+            ❯
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-indigo-950 py-10 overflow-hidden">
+      <h5
+        class="block w-fit mx-auto text-white text-4xl font-bold px-6 py-2 border border-white/30 rounded-lg backdrop-blur-sm bg-white/5"
+      >
+        OUR COLLECTION
+      </h5>
+
+      <div class="overflow-hidden w-full pt-10">
+        <!-- MOVING TRACK -->
+        <div
+          class="flex gap-10 whitespace-nowrap animate-marquee w-max w-[300px] h-[200px] object-cover rounded-xl"
+        >
+          <img src="https://picsum.photos/200/150?1" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?2" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?3" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?4" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?5" class="rounded-xl" />
+
+          <!-- duplicate for seamless loop -->
+          <img src="https://picsum.photos/200/150?1" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?2" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?3" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?4" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?5" class="rounded-xl" />
+        </div>
+      </div>
+
+      <div class="overflow-hidden w-full pt-5">
+        <!-- MOVING TRACK -->
+        <div
+          class="flex gap-10 whitespace-nowrap animate-marquee2 w-max w-[300px] h-[200px] object-cover rounded-xl"
+        >
+          <img src="https://picsum.photos/200/150?6" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?7" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?8" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?9" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?10" class="rounded-xl" />
+
+          <!-- duplicate for seamless loop -->
+          <img src="https://picsum.photos/200/150?6" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?7" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?8" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?9" class="rounded-xl" />
+          <img src="https://picsum.photos/200/150?10" class="rounded-xl" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-indigo-950 h-[80vh] flex items-start pt-10">
+      <div
+        class="outline-double outline-pink-500 outline-offset-50 max-w-6xl mx-auto flex flex-col gap-10 w-full"
+      >
+        <h5 class="text-white text-4xl font-bold text-center pb-4">PRICING</h5>
+        <!-- CARD1 -->
+        <div
+          id="pricingCards"
+          class="flex justify-center gap-10 opacity-0 translate-y-10 transition-all duration-700"
+        >
+          <div
+            class="w-[280px] h-[420px] bg-[#111827] rounded-2xl p-6 text-center shadow-xl flex flex-col justify-between"
+          >
+            <div class="text-4xl font-bold text-pink-400">1499</div>
+            <p class="text-gray-400 mb-6">/ Month</p>
+
+            <ul class="text-sm text-gray-300 space-y-3 mb-6">
+              <li>✔ Lorem ipsum dolor sit</li>
+              <li>✔ Lorem ipsum dolor sit</li>
+              <li>✔ Lorem ipsum dolor sit</li>
+              <li>✖ Lorem ipsum dolor sit</li>
+            </ul>
+
+            <button
+              class="bg-gradient-to-r from-pink-400 to-orange-400 px-6 py-2 rounded-full text-white"
+            >
+              BUY NOW
+            </button>
+          </div>
+
+          <!-- CARD 2 (FEATURED) -->
+          <div
+            class="relative w-[300px] h-[460px] bg-[#111827] rounded-2xl p-8 text-center shadow-2xl scale-110 border border-purple-500 flex flex-col justify-between"
+          >
+            <!-- Badge -->
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-1 rounded-full text-xs text-white"
+            >
+              STANDARD
+            </div>
+
+            <div class="text-5xl font-bold text-purple-400 mt-4">2499</div>
+            <p class="text-gray-400 mb-6">/ Month</p>
+
+            <ul class="text-sm text-gray-300 space-y-3 mb-6">
+              <li>✔ Lorem ipsum dolor sit</li>
+              <li>✔ Lorem ipsum dolor sit</li>
+              <li>✔ Lorem ipsum dolor sit</li>
+              <li>✔ Lorem ipsum dolor sit</li>
+            </ul>
+
+            <button
+              class="bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-2 rounded-full text-white"
+            >
+              BUY NOW
+            </button>
+          </div>
+
+          <!-- CARD 3 -->
+          <div
+            class="w-[280px] h-[420px] bg-[#111827] rounded-2xl p-6 text-center shadow-xl flex flex-col justify-between"
+          >
+            <div class="text-4xl font-bold text-blue-400">4999</div>
+            <p class="text-gray-400 mb-6">/ Month</p>
+
+            <ul class="text-sm text-gray-300 space-y-3 mb-6">
+              <li>✔ Lorem ipsum dolor sit</li>
+              <li>✔ Lorem ipsum dolor sit</li>
+              <li>✔ Lorem ipsum dolor sit</li>
+              <li>✔ Lorem ipsum dolor sit</li>
+            </ul>
+
+            <button
+              class="bg-gradient-to-r from-blue-400 to-cyan-400 px-6 py-2 rounded-full text-white"
+            >
+              BUY NOW
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-100 py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- 2 Column Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-10 gap-10">
+          <!-- LEFT (20%) -->
+          <div class="lg:col-span-3 flex flex-col">
+            <h6
+              class="font-6xl text-green-500 font-bold uppercase text-sm tracking-wide"
+            >
+              Our Gallery
+            </h6>
+
+            <h2 class="text-4xl font-serif font-semibold text-gray-800 pt-15">
+              Where Every Image Tells a Story
+            </h2>
+
+            <p class="text-gray-500 mt-4 text-sm leading-relaxed pt-20">
+              Discover a curated collection of high-quality visuals crafted for
+              creators, brands, and businesses. From striking landscapes to
+              modern lifestyle shots, our gallery offers versatile imagery
+              designed to elevate your projects.
+            </p>
+          </div>
+
+          <!-- RIGHT (80%) -->
+          <div
+            class="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[180px]"
+          >
+            <!-- Big Image -->
+            <div class="md:col-span-2 row-span-2 overflow-hidden rounded-xl">
+              <img
+                data-src="https://picsum.photos/800/600?random=1"
+                class="gallery-img w-full h-full object-cover opacity-0 translate-y-10 transition duration-700"
+              />
+            </div>
+
+            <!-- Top Right -->
+            <div class="overflow-hidden rounded-xl">
+              <img
+                src="https://picsum.photos/400/400?random=2"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+
+            <!-- Bottom Left -->
+            <div class="overflow-hidden rounded-xl">
+              <img
+                src="https://picsum.photos/400/400?random=3"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+
+            <!-- Bottom Middle -->
+            <div class="overflow-hidden rounded-xl">
+              <img
+                src="https://picsum.photos/400/400?random=4"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+
+            <!-- Bottom Right -->
+            <div class="overflow-hidden rounded-xl">
+              <img
+                src="https://picsum.photos/400/400?random=5"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black text-white py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-12">
+          <h2 class="text-4xl font-bold">Reviews</h2>
+        </div>
+
+        <!-- Cards Container -->
+        <div
+          id="cardContainer"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 opacity-0 -translate-y-10 transition-all duration-700"
+        ></div>
+      </div>
+    </section>
+
+    <section class="bg-gray-400 py-20">
+      <div class="max-w-3xl mx-auto bg-gray-200 rounded-2xl shadow-md p-10">
+        <!-- Heading -->
+        <div class="text-center mb-8">
+          <h2 class="text-4xl font-bold">FAQ</h2>
+          <p class="text-gray-500 mt-2">Frequently asked questions</p>
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="space-y-5">
+          <!-- Item -->
+          <div
+            class="faq-item border-b pb-4 rounded-lg px-3 transition-all duration-900 hover:scale-[1.02] hover:border hover:border-black hover:shadow-md"
+          >
+            <button
+              onclick="toggleFAQ(0)"
+              class="w-full flex justify-between items-center text-left"
+            >
+              <span class="text-lg font-medium"
+                >How does the billing work?</span
+              >
+              <span id="icon-0">+</span>
+            </button>
+            <p
+              id="faq-0"
+              class="mt-2 text-gray-600 max-h-0 overflow-hidden opacity-0 transition-all duration-300"
+            >
+              Billing is done monthly based on your selected plan.
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div
+            class="faq-item border-b pb-4 rounded-lg px-3 transition-all duration-300 hover:scale-[1.02] hover:border hover:border-black hover:shadow-md"
+          >
+            <button
+              onclick="toggleFAQ(1)"
+              class="w-full flex justify-between items-center text-left"
+            >
+              <span class="text-lg font-medium"
+                >Can I get a refund for my subscription?</span
+              >
+              <span id="icon-1">+</span>
+            </button>
+            <p
+              id="faq-1"
+              class="mt-2 text-gray-600 max-h-0 overflow-hidden opacity-0 transition-all duration-300"
+            >
+              Refunds are available within 7 days of purchase under certain
+              conditions.
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div
+            class="faq-item border-b pb-4 rounded-lg px-3 transition-all duration-300 hover:scale-[1.02] hover:border hover:border-black hover:shadow-md"
+          >
+            <button
+              onclick="toggleFAQ(2)"
+              class="w-full flex justify-between items-center text-left"
+            >
+              <span class="text-lg font-medium"
+                >How do I cancel my subscription?</span
+              >
+              <span id="icon-2">+</span>
+            </button>
+            <p
+              id="faq-2"
+              class="mt-2 text-gray-600 max-h-0 overflow-hidden opacity-0 transition-all duration-300"
+            >
+              You can cancel anytime from your dashboard under account settings.
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div
+            class="faq-item border-b pb-4 rounded-lg px-3 transition-all duration-300 hover:scale-[1.02] hover:border hover:border-black hover:shadow-md"
+          >
+            <button
+              onclick="toggleFAQ(3)"
+              class="w-full flex justify-between items-center text-left"
+            >
+              <span class="text-lg font-medium">Is there a free trial?</span>
+              <span id="icon-3">+</span>
+            </button>
+            <p
+              id="faq-3"
+              class="mt-2 text-gray-600 max-h-0 overflow-hidden opacity-0 transition-all duration-300"
+            >
+              Yes, we offer a 14-day free trial with full access.
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div
+            class="faq-item border-b pb-4 rounded-lg px-3 transition-all duration-300 hover:scale-[1.02] hover:border hover:border-black hover:shadow-md"
+          >
+            <button
+              onclick="toggleFAQ(4)"
+              class="w-full flex justify-between items-center text-left"
+            >
+              <span class="text-lg font-medium">How do I contact support?</span>
+              <span id="icon-4">+</span>
+            </button>
+            <p
+              id="faq-4"
+              class="mt-2 text-gray-600 max-h-0 overflow-hidden opacity-0 transition-all duration-300"
+            >
+              You can reach support via email or live chat 24/7.
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div
+            class="faq-item border-b pb-4 rounded-lg px-3 transition-all duration-300 hover:scale-[1.02] hover:border hover:border-black hover:shadow-md"
+          >
+            <button
+              onclick="toggleFAQ(5)"
+              class="w-full flex justify-between items-center text-left"
+            >
+              <span class="text-lg font-medium"
+                >Do you offer any discounts or promotions?</span
+              >
+              <span id="icon-5">+</span>
+            </button>
+            <p
+              id="faq-5"
+              class="mt-2 text-gray-600 max-h-0 overflow-hidden opacity-0 transition-all duration-300"
+            >
+              Yes, we run seasonal promotions and student discounts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-indigo-900 py-16">
+      <div class="max-w-6xl mx-auto px-6 relative">
+        <!-- HEADER -->
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-white text-3xl font-bold">Featured Shots</h2>
+        </div>
+
+        <!-- CAROUSEL -->
+        <div
+          id="carousel"
+          class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar"
+        >
+          <!-- CARD -->
+          <div
+            class="min-w-[300px] bg-black rounded-2xl shadow-lg p-4 snap-start"
+          >
+            <img
+              src="https://picsum.photos/400/250?1"
+              class="rounded-xl mb-4 w-full h-[200px] object-cover"
+            />
+            <h3 class="font-semibold text-lg text-white">Mountain View</h3>
+            <p class="text-gray-600 text-sm mt-1">
+              A peaceful mountain landscape captured during sunrise.
+            </p>
+          </div>
+
+          <div
+            class="min-w-[300px] bg-black rounded-2xl shadow-lg p-4 snap-start"
+          >
+            <img
+              src="https://picsum.photos/400/250?2"
+              class="rounded-xl mb-4 w-full h-[200px] object-cover"
+            />
+            <h3 class="font-semibold text-lg text-white">City Lights</h3>
+            <p class="text-gray-600 text-sm mt-1">
+              Night city skyline glowing with vibrant lights.
+            </p>
+          </div>
+
+          <div
+            class="min-w-[300px] bg-black rounded-2xl shadow-lg p-4 snap-start"
+          >
+            <img
+              src="https://picsum.photos/400/250?3"
+              class="rounded-xl mb-4 w-full h-[200px] object-cover"
+            />
+            <h3 class="font-semibold text-lg text-white">Ocean Breeze</h3>
+            <p class="text-gray-600 text-sm mt-1">
+              Calm ocean waves hitting the shore at sunset.
+            </p>
+          </div>
+
+          <div
+            class="min-w-[300px] bg-black rounded-2xl shadow-lg p-4 snap-start"
+          >
+            <img
+              src="https://picsum.photos/400/250?4"
+              class="rounded-xl mb-4 w-full h-[200px] object-cover"
+            />
+            <h3 class="font-semibold text-lg text-white">Forest Path</h3>
+            <p class="text-gray-600 text-sm mt-1">
+              A hidden trail deep inside a green forest.
+            </p>
+          </div>
+
+          <div
+            class="min-w-[300px] bg-black rounded-2xl shadow-lg p-4 snap-start"
+          >
+            <img
+              src="https://picsum.photos/400/250?5"
+              class="rounded-xl mb-4 w-full h-[200px] object-cover"
+            />
+            <h3 class="font-semibold text-lg text-white">Desert Dunes</h3>
+            <p class="text-gray-600 text-sm mt-1">
+              Golden sand dunes shaped by the wind.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-indigo-950 text-gray-300">
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <!-- TOP GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+          <!-- BRAND -->
+          <div class="lg:col-span-2">
+            <h2 class="text-2xl font-bold text-white mb-4">Framevault</h2>
+            <p class="text-gray-400 leading-relaxed mb-6">
+              Discover and download high-quality, watermark-free images. Built
+              for creators who value clarity, detail, and premium visuals.
+            </p>
+
+            <!-- SOCIALS -->
+            <div class="flex gap-4">
+              <a href="#" class="hover:text-white transition">🌐</a>
+              <a href="#" class="hover:text-white transition">📸</a>
+              <a href="#" class="hover:text-white transition">🐦</a>
+              <a href="#" class="hover:text-white transition">💼</a>
+            </div>
+          </div>
+
+          <!-- PRODUCT -->
+          <div>
+            <h3 class="text-white font-semibold mb-4">Product</h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="hover:text-white transition">Explore</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition">Collections</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition">Pricing</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition">Featured</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- COMPANY -->
+          <div>
+            <h3 class="text-white font-semibold mb-4">Company</h3>
+            <ul class="space-y-3">
+              <li><a href="#" class="hover:text-white transition">About</a></li>
+              <li>
+                <a href="#" class="hover:text-white transition">Careers</a>
+              </li>
+              <li><a href="#" class="hover:text-white transition">Blog</a></li>
+              <li>
+                <a href="#" class="hover:text-white transition">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div
+          class="mt-16 border-t border-indigo-800 pt-10 flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <div>
+            <h4 class="text-white font-semibold text-lg mb-2">
+              Stay in the loop
+            </h4>
+            <p class="text-gray-400 text-sm">
+              Get curated collections and updates directly to your inbox.
+            </p>
+          </div>
+
+          <div class="flexw-full md:w-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full md:w-72 px-4 py-3 rounded-l-lg bg-indigo-900 border border-indigo-700 text-white placeholder-gray-400 focus:outline-none"
+            />
+            <button
+              class="bg-indigo-600 hover:bg-indigo-500 px-6 py-3 rounded-r-lg text-white font-medium transition"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <!-- BOTTOM -->
+        <div
+          class="mt-10 border-t border-indigo-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500"
+        >
+          <p>© 2026 Framevault. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-white transition">Terms</a>
+            <a href="#" class="hover:text-white transition">Privacy</a>
+            <a href="#" class="hover:text-white transition">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/slider.js"></script>
+    <script src="src/main.js"></script>
+    <script src="src/FAQ.js"></script>
+    <script src="src/caoursel.js"></script>
+    <script>
+      const images = document.querySelectorAll(".gallery-img");
+
+      const observerimg = new IntersectionObserver(
+        (entries, observerimg) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+
+              img.src = img.dataset.src;
+
+              // animation trigger
+              img.classList.remove("opacity-0", "translate-y-10");
+              img.classList.add("opacity-100", "translate-y-0");
+
+              observerimg.unobserve(img);
+            }
+          });
+        },
+        {
+          threshold: 0.2, // 20% visible = triggers when ~80% is still outside
+        },
+      );
+
+      images.forEach((img) => observerimg.observe(img));
+
+      const pricing = document.getElementById("pricingCards");
+
+      const observer3 = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              pricing.classList.remove("opacity-0", "translate-y-10");
+              pricing.classList.add("opacity-100", "translate-y-0");
+
+              observer3.unobserve(pricing);
+            }
+          });
+        },
+        {
+          threshold: 0.3,
+        },
+      );
+
+      observer3.observe(pricing);
+
+      const section = document.getElementById("cardContainer");
+
+      const observer2 = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // immediate trigger (no delay)
+              section.classList.remove("opacity-0", "-translate-y-10");
+              section.classList.add("opacity-100", "translate-y-0");
+
+              observer2.unobserve(section);
+            }
+          });
+        },
+        {
+          threshold: 0.8, // 80% visible
+        },
+      );
+
+      observer2.observe(section);
+
+      const reviews = [
+        {
+          name: "Aarav",
+          role: "Art Collector",
+          star: "★★★★",
+          img: "https://randomuser.me/api/portraits/men/32.jpg",
+          text: "This artwork looks even better in real life. The colors are amazing.",
+        },
+        {
+          name: "Viraj",
+          role: "developer",
+          star: "★★★",
+          img: "https://randomuser.me/api/portraits/men/44.jpg",
+          text: "Bought a digital print and framed it — looks premium.",
+        },
+        {
+          name: "Rohan ",
+          role: "Photographer",
+          star: "★★★★★",
+          img: "https://randomuser.me/api/portraits/men/76.jpg",
+          text: "Perfect for my room decor. Will definitely buy more.",
+        },
+        {
+          name: "Neha M.",
+          role: "Interior Stylist",
+          img: "https://randomuser.me/api/portraits/women/68.jpg",
+          text: "Gives my space a modern and artistic vibe.",
+        },
+        {
+          name: "Kabir V.",
+          role: "Startup Founder",
+          img: "https://randomuser.me/api/portraits/men/11.jpg",
+          text: "Minimal, clean, and exactly what I was looking for.",
+        },
+        {
+          name: "Ananya R.",
+          role: "Student",
+          img: "https://randomuser.me/api/portraits/women/25.jpg",
+          text: "Affordable and high quality prints. Loved it!",
+        },
+      ];
+
+      const container = document.getElementById("cardContainer");
+      let index = 0;
+      const visibleCards = 3;
+
+      function renderCards() {
+        container.innerHTML = "";
+
+        for (let i = 0; i < visibleCards; i++) {
+          const review = reviews[(index + i) % reviews.length];
+
+          const card = `
+        <div class="bg-gradient-to-b from-gray-800 to-black p-6 rounded-2xl shadow-lg">
+          <div class="flex text-yellow-400 mb-4 text-4xl">${review.star}</div>
+          <p class="text-gray-300 mb-6 ">${review.text}</p>
+
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <img src="${review.img}" class="w-10 h-10 rounded-full"/>
+              <div>
+                <p class="font-semibold">${review.name}</p>
+                <p class="text-sm text-gray-400">${review.role}</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      `;
+
+          container.innerHTML += card;
+        }
+      }
+
+      document.getElementById("nextBtn").addEventListener("click", () => {
+        index = (index + 1) % reviews.length;
+        renderCards();
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        index = (index - 1 + reviews.length) % reviews.length;
+        renderCards();
+      });
+
+      // initial render
+      renderCards();
+
+      const cards = document.querySelectorAll(".hidden-top");
+
+      const observerr = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+
+              observerr.unobserve(entry.target); // animate once
+            }
+          });
+        },
+        {
+          threshold: 0.6, // safer than 0.8 for cards
+        },
+      );
+
+      cards.forEach((card) => observerr.observe(card));
+      const addBtn = document.getElementById("addImageBtn");
+      const input = document.getElementById("imageInput");
+      const gallery = document.getElementById("gallery");
+
+      addBtn.addEventListener("click", () => {
+        input.click();
+      });
+
+      input.addEventListener("change", () => {
+        const file = input.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          const img = document.createElement("img");
+          img.src = e.target.result;
+          img.className = "w-full rounded-xl";
+
+          gallery.appendChild(img);
+        };
+
+        reader.readAsDataURL(file);
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+
+      document
+        .querySelectorAll(".hidden-left, .hidden-right")
+        .forEach((el) => observer.observe(el));
+    </script>
+    <script>
+      const items = document.querySelectorAll(".faq-item");
+
+      const o = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              // delay for stagger effect
+              setTimeout(() => {
+                entry.target.classList.add("show");
+              }, 300);
+
+              o.unobserve(entry.target); // animate only once
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        },
+      );
+
+      items.forEach((item) => o.observe(item));
+    </script>
+  </body>
+</html>

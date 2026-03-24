@@ -1,0 +1,71 @@
+class="text-3xl font-bold text-blue-500"
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Static Web</title>
+  </head>
+
+  <body class="bg-black font-sans">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full flex justify-center backdrop-blur-md bg-gradient-to-r from-blue-400 to-cyan-400 z-50">
+      <a href="#page1" class="m-2 px-3 py-2 rounded bg-gradient-to-r from-blue-400 to-cyan-400 text-black hover:bg-white hover:text-black transition">
+        Page 1: Home
+      </a>
+      <a href="#page2" class="m-2 px-3 py-2 rounded bg-gradient-to-r from-blue-400 to-cyan-400 text-black hover:bg-white hover:text-black transition">
+        Page 2 : Gallery
+      </a>
+    </nav>
+
+    <!-- PAGE 1 -->
+    <section id="page1" class="min-h-screen flex justify-between items-center p-12 bg-gradient-to-br from-blue-400 to-cyan-400">
+
+      <div class="max-w-[50%]">
+        <h1 class="text-[90px] text-black text-center mt-5 opacity-0 animate-[fadeIn_2s_ease_forwards]">
+          My Gallery
+        </h1>
+
+        <p class="mt-5 text-white bg-white/20 px-2 py-1 rounded-lg shadow-lg text-center opacity-0 animate-[fadeIn_2s_ease_forwards] [animation-delay:1s]">
+          Discover a curated collection of moments, stories, and perspectives
+          captured through the lens.
+        </p>
+      </div>
+
+      <img src="/assets/image.png" class="max-w-[45%] rounded-lg opacity-0 animate-[fadeIn_2s_ease_forwards]" />
+    </section>
+
+    <!-- PAGE 2 -->
+    <section id="page2" class="min-h-screen bg-gradient-to-br from-blue-400 to-cyan-400">
+
+      <div class="flex flex-wrap justify-center gap-4 p-5">
+
+        <!-- Images -->
+        <img src="https://picsum.photos/300/400" class="w-[300px] h-[400px] rounded-lg hover:scale-105 hover:shadow-xl transition" />
+        <img src="https://picsum.photos/300/500" class="w-[300px] h-[400px] rounded-lg hover:scale-105 hover:shadow-xl transition" />
+        <img src="https://picsum.photos/300/350" class="w-[300px] h-[400px] rounded-lg hover:scale-105 hover:shadow-xl transition" />
+        <img src="https://picsum.photos/300/600" class="w-[300px] h-[400px] rounded-lg hover:scale-105 hover:shadow-xl transition" />
+        <img src="https://picsum.photos/300/450" class="w-[300px] h-[400px] rounded-lg hover:scale-105 hover:shadow-xl transition" />
+        <img src="https://picsum.photos/300/300" class="w-[300px] h-[400px] rounded-lg hover:scale-105 hover:shadow-xl transition" />
+
+        <img src="https://picsum.photos/100/100" class="w-[300px] h-[400px] rounded-lg hover:scale-105 hover:shadow-xl transition" />
+        <img src="https://picsum.photos/150/150" class="w-[300px] h-[400px] rounded-lg hover:scale-105 hover:shadow-xl transition" />
+        <img src="https://picsum.photos/200/250" class="w-[300px] h-[400px] rounded-lg hover:scale-105 hover:shadow-xl transition" />
+        <img src="https://picsum.photos/100/250" class="w-[300px] h-[400px] rounded-lg hover:scale-105 hover:shadow-xl transition" />
+        <img src="https://picsum.photos/200/350" class="w-[300px] h-[400px] rounded-lg hover:scale-105 hover:shadow-xl transition" />
+        <img src="https://picsum.photos/100/200" class="w-[300px] h-[400px] rounded-lg hover:scale-105 hover:shadow-xl transition" />
+
+      </div>
+
+    </section>
+
+  </body>
+</html>
